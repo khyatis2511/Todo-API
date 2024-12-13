@@ -10,7 +10,7 @@ export class AppController {
     return this.appService.getHello();
   }
 
-  @Put(':id')
+  @Put('/check/:id')
   eventVendorAction(@Body() updateDto: any, @Param('id') id: string) {
     return this.appService.updateAction({ updateDto, id });
   }
