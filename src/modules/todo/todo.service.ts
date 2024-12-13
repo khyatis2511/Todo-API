@@ -35,7 +35,7 @@ export class TodoService {
           isDeleted: false,
         },
       });
-      if (!result) {
+      if (result) {
         const data = await this.prisma.todo.update({
           where: {
             id: result.id,
